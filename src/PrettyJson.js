@@ -9,7 +9,7 @@ import pojo from './pojo';
 /**
  * A component that displays json data as pretty-printed html.
  */
-export default class PrettyJson extends React.Component {
+export default class PrettyJson extends React.PureComponent {
     static propTypes = {
         className: PropTypes.string,
         json: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -17,10 +17,12 @@ export default class PrettyJson extends React.Component {
         onError: PropTypes.func,
     };
     static defaultProps = {
-        json: {}
+        json: {},
     };
-    componentDidUpdate() {
-        this.convertHtml(this.elementRef);
+    componentDidUpdate(prevProps) {
+        if (prevProps.json !== this.props.json) {
+            this.convertHtml(this.elementRef);
+        }
     }
     render() {
         const { className, json, ...props } = this.props;
