@@ -5,7 +5,7 @@ A react component that pretty-prints JSON data, based on http://jsfiddle.net/unl
 ## Usage
 
 
-```
+```javascript
 import React, { Component } from 'react';
 import PrettyJson from '@loopmode/react-pretty-json';
 
