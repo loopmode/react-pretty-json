@@ -2,8 +2,9 @@
 
 A react component that pretty-prints JSON data, based on http://jsfiddle.net/unlsj.
 
-## Usage
+<img src="https://github.com/loopmode/react-pretty-json/raw/master/example.png" />
 
+## Usage
 
 ```javascript
 import React, { Component } from 'react';
