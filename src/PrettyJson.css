@@ -1,0 +1,21 @@
+:local(.PrettyJson) {
+  pre {
+    background-color: ghostwhite;
+    border: 1px solid silver;
+    padding: 10px 20px;
+    margin: 0;
+    overflow: auto;
+  }
+
+  .json-key {
+    color: brown;
+  }
+
+  .json-value {
+    color: navy;
+  }
+
+  .json-string {
+    color: olive;
+  }
+}

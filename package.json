@@ -1,0 +1,35 @@
+{
+  "name": "@loopmode/react-pretty-json",
+  "version": "1.0.0",
+  "description": "A react component that pretty-prints JSON data, based on http://jsfiddle.net/unlsj",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf lib/* && babel src --out-dir lib --copy-files",
+    "watch": "babel src --out-dir lib --watch",
+    "prepublish": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loopmode/react-pretty-json.git"
+  },
+  "keywords": [],
+  "author": "Jovica Aleksic <jovica.aleksic@loopmode.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loopmode/react-pretty-json/issues"
+  },
+  "homepage": "https://github.com/loopmode/react-pretty-json#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1"
+  },
+  "dependencies": {
+    "prop-types": ">=0.14",
+    "react": ">=0.14"
+  }
+}
