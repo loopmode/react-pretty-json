@@ -12,6 +12,9 @@ import pojo from './pojo';
 export default class PrettyJson extends React.PureComponent {
     static propTypes = {
         className: PropTypes.string,
+        // @since 1.0.3
+        data: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        // @since 1.0.3 legacy alias for "data"
         json: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         onPrettyPrint: PropTypes.func,
         onError: PropTypes.func,
@@ -20,13 +23,16 @@ export default class PrettyJson extends React.PureComponent {
         json: {},
     };
     componentDidUpdate(prevProps) {
-        if (prevProps.json !== this.props.json) {
+        if (prevProps.json !== this.props.json || prevProps.data !== this.props.data) {
+            if (this.props.json && process.env.NODE_ENV !== 'production') {
+                console.warn('[PrettyJson] The "json" prop is deprecated. Please use "data" instead.')
+            }
             this.convertHtml(this.elementRef);
         }
     }
     render() {
-        const { className, json, ...props } = this.props;
-        const html = this.prettyPrint(json);
+        const { className, data, json, ...props } = this.props;
+        const html = this.prettyPrint(data || json);
         return (
             <div className={cx(className, style.PrettyJson, 'PrettyJson')} {...props}>
                 <pre>
