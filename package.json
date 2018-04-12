@@ -1,6 +1,6 @@
 {
   "name": "@loopmode/react-pretty-json",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A react component that pretty-prints JSON data, based on http://jsfiddle.net/unlsj",
   "main": "lib/index.js",
   "scripts": {
