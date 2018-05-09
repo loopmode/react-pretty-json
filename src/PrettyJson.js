@@ -15,12 +15,10 @@ export default class PrettyJson extends React.PureComponent {
         // @since 1.0.3
         data: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         // @since 1.0.3 legacy alias for "data"
+        // TODO maybe drop legacy support?
         json: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         onPrettyPrint: PropTypes.func,
         onError: PropTypes.func
-    };
-    static defaultProps = {
-        json: {}
     };
     warnLegacyProp = process.env.NODE_ENV !== 'production'
         ? (oldProp, newProp) => console.warn(`[PrettyJson] The prop "${oldProp}" is deprecated. Please use "${newProp}" instead.`)
@@ -69,6 +67,9 @@ export default class PrettyJson extends React.PureComponent {
         return r + (pEnd || '');
     }
     prettyPrint(obj) {
+        if (!obj) {
+            return '';
+        }
         try {
             obj = typeof obj === 'string' ? JSON.parse(obj) : pojo(obj);
             var jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/gm;

@@ -1,3 +1,7 @@
+# 1.0.6
+
+* drop defaultProps.json
+
 # 1.0.5
 
 * add warning to componentDidMount
