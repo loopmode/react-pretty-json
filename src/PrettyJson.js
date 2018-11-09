@@ -3,7 +3,7 @@ import React from "react";
 import cx from "classnames";
 import pojo from "./pojo";
 
-import styled from "stylled-components";
+import styled from "styled-components";
 
 const StyledContainer = styled.div`
     pre {
