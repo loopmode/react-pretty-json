@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
 import cx from "classnames";
-import style from "./PrettyJson.css";
 import pojo from "./pojo";
 
 import styled from "stylled-components";

@@ -1,5 +1,7 @@
+# 1.0.8
 # 1.0.7
 
+* Remove reference to css file
 * Use [styled-components](https://www.npmjs.com/package/styled-components)
 
 # 1.0.6
