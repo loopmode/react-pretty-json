@@ -1,3 +1,7 @@
+# 1.0.7
+
+* Use [styled-components](https://www.npmjs.com/package/styled-components)
+
 # 1.0.6
 
 * drop defaultProps.json
